@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan Teknik Pemesinan</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img src="images/header.jpg" class="foto">
+
+    <div class="navbar">
+        <img src="images/smkbisahebat.png" alt="Logo" class="logo">
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">BERANDA</a>
+          <a href="profil.html" class="nav-link">PROFIL</a>
+          <a href="prestasi.html" class="nav-link">PRESTASI</a>
+          <a href="album.html" class="nav-link">ALBUM</a>
+          <a href="bukutamu.html" class="nav-link active">BUKU TAMU</a>
+        </div>
+      </div>
+    
+
+<section id="beranda">
+    <section class="buku-tamu">
+        <h2>Buku Tamu</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScii4OuUfZDUsvlhwwDoIvfOcmMsHLGlmmj0RhM0ikrHM1PjQ/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+
+    </section>
+</section>
+
+<section id="album">
+    <ul type="square">
+        <li>Penjelasan singkat dan ucapan selamat datang dari kami. <a href="index.html">Kembali ke beranda</a></li>
+        <li>Bagian yang akan menjelaskanmu tentang susunan organisasi dan bagian sejarah dari kami. <a href="profil.html">Baca Selengkapnya...</a></li>
+        <li>Bagian yang berisi tentang banyaknya pencapaian yang kami raih selama ini. <a href="prestasi.html">Baca Selengkapnya...</a></li>
+        <li>Jangan lupa untuk mengisi absensi di Buku tamu ya! <a href="bukutamu.html">Absen Disini!</a></li>
+    </ul>
+</section>
+
+<div class="marquee-bar">
+    <div class="marquee-text" id="marquee-text">
+      🔴 Memuat berita terbaru...
+    </div>
+  </div>
+
+  <script>
+    const headlines = [
+     "Selamat datang di web Konsentrasi Keahlian Teknik Pemesinan!",
+      "Selamat menyimak dan membaca informasi dari kami yang tertera pada web ini!",
+      "🟢 PRESTASI : AKIB MAHFUDHZIN ROSYIDIL. T. dari kelas XI TP 1, berhasil mendapatkan Juara 1 LKS tingkat Provinsi. (Bidang Mechanical Engineering - CAD.)",
+      "🟢 PRESTASI : ZAKIA SYAFIQ AL-ASHAR. dari kelas XI TP 3, berhasil mendapatkan Juara 3 LKS tingkat Provinsi. (Bidang CNC MILLING)",
+      "🟢 PRESTASI : JA'FAR RAHMATULLOH. dari kelas XI TP 3, berhasil mendapatkan Juara 3 LKS tingkat Provinsi. (Bidang Metrologi)"
+    ];
+  
+    let index = 0;
+    const marquee = document.getElementById('marquee-text');
+  
+    function updateHeadline() {
+      // Hentikan animasi
+      marquee.style.animation = 'none';
+  
+      // Ganti teks
+      marquee.textContent = headlines[index];
+      index = (index + 1) % headlines.length;
+  
+      // Paksa reflow agar animasi bisa di-restart
+      void marquee.offsetWidth;
+  
+      // Hidupkan lagi animasi
+      marquee.style.animation = 'marquee 11s linear infinite';
+    }
+  
+    updateHeadline();
+    setInterval(updateHeadline, 11000);
+  </script>
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    
+    <div class="footer-section">
+      <h3>Navigasi Cepat</h3>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="album.html">Album</a></li>
+        <li><a href="bukutamu.html">Buku Tamu</a></li>
+      </ul>
+    </div>
+
+  
+    <div class="footer-section">
+      <h3>Lokasi Kami</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.120243590584!2d110.36479467476585!3d-7.77707289224248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58373fffffff%3A0xa4ec1ca156555926!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1745845061159!5m2!1sid!2sid" width="350" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    
+    <div class="footer-section">
+      <h3>Media Sosial SMKN 2 YK</h3>
+      <a href="https://www.facebook.com/SMK2YK">Facebook</a><br>
+      <a href="https://www.instagram.com/smkn2yogyakarta?igsh=MTk0amR6bG92cmdudQ==">Instagram</a><br>
+      <a href="www.youtube.com/@SMKN2Yogyakarta">YouTube</a><br>
+      <a href="https://www.tiktok.com/@smk2yogyakarta?is_from_webapp=1&sender_device=pc">Tiktok</a><br>
+      <a href="https://x.com/smkn2yogyakarta?s=09">Twitter/X</a><br>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Haidar Rafif D. K/ Teknik Pemesinan SMK Negeri 2 Yogyakarta
+  </div>
+</footer>
+
+</body>
+</html>
